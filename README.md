@@ -162,7 +162,7 @@ Importados y adaptados de: https://github.com/HaoguangYang/microros-zynq
                 "-DUCLIENT_PROFILE_SERIAL=OFF",
                 "-UCLIENT_PROFILE_STREAM_FRAMING=ON",
                 "-DUCLIENT_PROFILE_CUSTOM_TRANSPORT=OFF",
-				"-DUCLIENT_PLATFORM_FREERTOS_PLUS_TCP=ON",
+                "-DUCLIENT_PLATFORM_FREERTOS_PLUS_TCP=ON",
                 "-DUCLIENT_PROFILE_MULTITHREAD=OFF",
                 "-DUCLIENT_PROFILE_SHARED_MEMORY=ON"
             ]
@@ -196,8 +196,8 @@ set(CMAKE_CROSSCOMPILING 1)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # SET HERE THE PATH TO YOUR C99 AND C++ COMPILERS
-set(CMAKE_C_COMPILER /opt/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER /opt/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-g++)
+set(CMAKE_C_COMPILER /tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER /tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-g++)
 
 set(CMAKE_C_COMPILER_WORKS 1 CACHE INTERNAL "")
 set(CMAKE_CXX_COMPILER_WORKS 1 CACHE INTERNAL "")
@@ -286,6 +286,16 @@ Alias opcional:
 
 ```bash
 alias microros="docker exec -it microros /bin/bash"
+```
+
+Lanzar ROS2:
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/microros_ws/install/setup.bash
+
+#Comprobamos que está sourceado
+which ros2
 ```
 
 ***
