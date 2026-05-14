@@ -156,13 +156,13 @@ Importados y adaptados de: https://github.com/HaoguangYang/microros-zynq
         "microxrcedds_client": {
             "cmake-args": [
                 "-DUCLIENT_PIC=OFF",
-                "-DUCLIENT_PROFILE_UDP=ON",
+                "-DUCLIENT_PROFILE_UDP=OFF",
                 "-DUCLIENT_PROFILE_TCP=OFF",
                 "-DUCLIENT_PROFILE_DISCOVERY=OFF",
                 "-DUCLIENT_PROFILE_SERIAL=OFF",
                 "-UCLIENT_PROFILE_STREAM_FRAMING=ON",
-                "-DUCLIENT_PROFILE_CUSTOM_TRANSPORT=OFF",
-                "-DUCLIENT_PLATFORM_FREERTOS_PLUS_TCP=ON",
+                "-DUCLIENT_PROFILE_CUSTOM_TRANSPORT=ON",
+                "-DUCLIENT_PLATFORM_FREERTOS_PLUS_TCP=OFF",
                 "-DUCLIENT_PROFILE_MULTITHREAD=OFF",
                 "-DUCLIENT_PROFILE_SHARED_MEMORY=ON"
             ]
