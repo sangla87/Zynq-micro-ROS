@@ -232,8 +232,8 @@ set(__BIG_ENDIAN__ 0)
 cd ~/microros_ws
 
 ros2 run micro_ros_setup build_firmware.sh \
-  $(pwd)/config/toolchain.cmake \
-  $(pwd)/config/colcon.meta
+  $(pwd)/config/xilinx_zynq_toolchain.cmake \
+  $(pwd)/config/xilinx_zynq_colcon.meta
 ```
 
 ***
@@ -256,12 +256,12 @@ ros2 run micro_ros_agent micro_ros_agent udp4 --port 8888
 
 # ⚠️ Problemas comunes
 
-| Problema                | Causa                    |
-| ----------------------- | ------------------------ |
-| toolchain no encontrado | `/opt/Xilinx` no montado |
-| no conecta ROS2         | UDP deshabilitado        |
-| fallo en runtime red    | falta stack TCP/IP       |
-| build falla             | flags incorrectos        |
+| Problema                | Causa                      |
+| ----------------------- | -------------------------- |
+| toolchain no encontrado | `/tools/Xilinx` no montado |
+| no conecta ROS2         | UDP deshabilitado          |
+| fallo en runtime red    | falta stack TCP/IP         |
+| build falla             | flags incorrectos          |
 
 ***
 
@@ -298,19 +298,5 @@ alias microros="docker exec -it microros /bin/bash"
 
 ***
 
-```
 
----
 
-## ✅ Tip rápido para GitHub
-
-Cuando lo pegues:
-- usa **editor Markdown**
-- guarda como `README.md` en la raíz del repo
-
----
-
-Si quieres, en el siguiente paso puedo ayudarte a añadir:
-- diagrama del flujo (Docker → build → Vitis)
-- o sección específica de integración en Vitis (muy útil para tu caso)
-```
